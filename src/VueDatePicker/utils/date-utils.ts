@@ -72,6 +72,7 @@ export const parseFreeInput = (
     onPaste?: boolean,
     locale?: Locale,
 ): Date | null => {
+    console.log('Parse string: ' + inputVal);
     const defaultTime = Array.isArray(time) ? time[0] : time;
     if (typeof pattern === 'string') {
         return parseTextToDate(value, pattern, defaultTime, inputVal, onPaste, locale);
